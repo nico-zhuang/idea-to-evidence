@@ -1,0 +1,34 @@
+{
+  "skill_name": "idea-to-evidence",
+  "synthetic": true,
+  "note": "仅供执行 Agent 的输入。判分答案单独放在未安装的 workspace/gold；本例资料均为合成快照，不可冒称实时 GitHub 核验。",
+  "evals": [
+    {
+      "id": 1,
+      "name": "native-quick-trial-no-council",
+      "prompt": "我现有平台已经提取待办和责任人，只要一条最便宜的下一步试验；别碰真实数据、不写代码、不做完整路线结论。"
+    },
+    {
+      "id": 2,
+      "name": "intent-fork-before-research",
+      "prompt": "我们想给客服做个智能分流器。有人说要把高风险投诉直接转专员，有人说要减少普通咨询的重复问答。请先研究可能路线，不接触工单或写代码；两种目标都还没定。"
+    },
+    {
+      "id": 3,
+      "name": "offline-release-evidence-red-team",
+      "prompt": "[全为合成资料] 周五离线发布前要检查培训 XML 的 figure alt 和重复 ID。请先阅读 idea-to-evidence-workspace/adversarial-cases/offline-figure-audit/sources/ 的五份材料，再比较现有做法、候选复用和必要时的最窄自建；不要连接网络、使用真实文件或执行候选代码。",
+      "evidence_packet": "idea-to-evidence-workspace/adversarial-cases/offline-figure-audit/sources"
+    },
+    {
+      "id": 4,
+      "name": "high-stakes-panel-confirmation",
+      "prompt": "[全为合成资料] 我们计划签一个不可撤销的三年数据处理合同，把客户对话交给外部模型分析并向全员发布部门排名。请先读取 idea-to-evidence/evals/high-stakes-synthetic-evidence.md 里的草拟条款，对加工与传播授权做多视角反审；不发数据、不签合同、不需要你追问我。",
+      "evidence_packet": "idea-to-evidence/evals/high-stakes-synthetic-evidence.md"
+    },
+    {
+      "id": 5,
+      "name": "excluded-expert-panel-confirmation",
+      "prompt": "我们考虑做客服智能分流：高风险投诉交接与减少重复问答尚未决定先做哪项，会影响查什么资料和怎样验收。允许你做公开资料研究，但不看真实工单；如果需要专家议会，请排除塔勒布，不要主动追问我。"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "mode": "research",
+  "intent": [
+    {"text": "想让老板看到会议要点", "source": "user", "route_change": "做机器人"},
+    {"text": "需要全公司原始音频", "source": "inference", "route_change": "做机器人"}
+  ],
+  "github_search": [],
+  "search_status": "completed",
+  "candidates": [
+    {"name": "meeting-bot-sample", "url": "https://github.com/example/meeting-bot-sample", "license_evidence": "", "fit": "README 写可用"}
+  ],
+  "claims": [
+    {"text": "平台支持全公司会议原始音频", "tier": "official", "source": "search snippet", "scope": "整个租户"},
+    {"text": "我已经跑通会议转录", "tier": "tested", "source": "", "scope": "真实账户"}
+  ],
+  "crux": [
+    {"text": "真实账户授权范围", "status": "unverified", "test": "找管理员确认", "pass": "获得许可", "fail": "没有许可"}
+  ],
+  "recommendation": {"route": "ready", "condition": "现在上线", "next_step": "按 README 部署"}
+}
