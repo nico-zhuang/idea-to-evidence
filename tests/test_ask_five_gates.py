@@ -15,6 +15,13 @@ class ConditionalCouncilContract(unittest.TestCase):
         cls.review = (ROOT / "references" / "decision-grade-review.md").read_text(encoding="utf-8")
         cls.intent = (ROOT / "references" / "intent-engine.md").read_text(encoding="utf-8")
 
+    def test_depth_routing_preserves_reuse_gate_and_stopping(self):
+        for marker in ("对话", "快速试验", "有界比较", "决策级", "共同停止规则", "GitHub 对照明确标待做", "许可证与核心能力均核实"):
+            with self.subTest(marker=marker):
+                self.assertIn(marker, self.skill)
+        self.assertIn("三类查询可合并一次搜索请求", self.skill)
+        self.assertIn("不推荐自建、源码改造", self.skill)
+
     def test_skill_routes_to_real_council_reference(self):
         self.assertIn("references/ask-five-gates.md", self.skill)
         self.assertIn("G1", self.skill)
